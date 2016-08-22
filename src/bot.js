@@ -318,7 +318,7 @@ function updateLabels(prNumber, approved, labels, callback) {
     }
 
     if (!approved && labels.indexOf(config.labelReviewed) > -1) {
-        labels.removeAt(labels.indexOf(config.labelReviewed));
+        labels.splice(labels.indexOf(config.labelReviewed), 1);
         changed = true;
     }
     if (!approved && labels.indexOf(config.labelNeedsReview) === -1) {
